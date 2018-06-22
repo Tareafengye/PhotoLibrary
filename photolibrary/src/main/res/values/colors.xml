@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#fefefe</color>
+    <color name="black_dft">#3c3c3c</color>
+    <color name="main_color">#e9373b</color>
+    <color name="color_333">#333333</color>
+    <color name="color_grey">#33333333</color>
+    <color name="color_line">#e0e0e0</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="c_ff9900">#ff9900</color>
+    <color name="c_88">#88888888</color>
+    <color name="c_5151">#515151</color>
+    <color name="bg_floder_press">#bdbdbd</color>
+    <color name="d_b6">#dddbd1</color>
+    <color name="key_ok_color">#1280FA</color>
+    <color name="key_ok_color_pressed">#0174f2</color>
+    <color name="key_backspace_color">#DA6858</color>
+    <color name="key_backspace_color_pressed">#FF6858</color>
+    <color name="view">#C5C8CA</color>
+    <color name="text_color">#B3BDBE</color>
+    <color name="day_back">#f6f6f6</color>
+    <color name="black">#000000</color>
+</resources>
