@@ -1,19 +1,28 @@
 # PhotoLibrary
+# 依赖地址
+# 在gridle配置 maven仓库
+# 如图
+#### 图片
+![image.png](https://upload-images.jianshu.io/upload_images/6624077-0579d3ffde25182d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+```
+
+implementation 'com.github.Tareafengye:PhotoLibrary:1.1.0'
+```
 查看大图
-#用法
-#查看大图、相册，图片缓存等
+# 用法
+# 查看大图、相册，图片缓存等
 在Application中
 ```
 Awen.init(this);
 ```
-#在AndroidManifest.xml文件中配置Activity
+# 在AndroidManifest.xml文件中配置Activity
 ```
  <activity android:name="com.liu.photolibrary.activity.ClipPictureActivity" />
         <activity android:name="com.liu.photolibrary.activity.PhotoPagerActivity" />
         <activity android:name="com.liu.photolibrary.activity.PhotoPickActivity" />
         <activity android:name="com.liu.photolibrary.activity.PhotoPreviewActivity" />
 ```
-#查看单例
+# 查看单例
 ```
  new PhotoPagerConfig.Builder(activity)//上下文
                 //添加大图
@@ -22,8 +31,8 @@ Awen.init(this);
                 .setSaveImageLocalPath("fileurl")//保存地址
                 .build();
 ```
-#打开图库
-#一
+# 打开图库
+# 一
 ```
  new PhotoPickConfig.Builder(activity)
                 .pickMode(PhotoPickConfig.MODE_MULTIP_PICK)
@@ -31,7 +40,7 @@ Awen.init(this);
                 .showCamera(false)
                 .build();
 ```
-#二
+# 二
 ```
  PhotoPickBean bean = new PhotoPickBean();
 //                bean.setMaxPickSize(15);
@@ -42,7 +51,7 @@ Awen.init(this);
 //                        .setPhotoPickBean(bean)
 //                        .build();
 ```
-#带有相机的
+# 带有相机的
 ```
   new PhotoPickConfig.Builder(activity)
                 .pickMode(PhotoPickConfig.MODE_MULTIP_PICK)
@@ -53,7 +62,7 @@ Awen.init(this);
                 
    
 ```
-#剪切头像
+# 剪切头像
 ```
     /***
      * 剪切头像
@@ -67,7 +76,7 @@ Awen.init(this);
                 .build();
     }
 ```
-#查看集合大图
+# 查看集合大图
 ```
     /**
      * 查看网络大图
@@ -83,7 +92,7 @@ Awen.init(this);
                 .build();
     }
 ```
-#具体请看MeiUtilPhotoUtil工具类，最后不要忘记添加相应的权限，网络、文件读取等
+# 具体请看MeiUtilPhotoUtil工具类，最后不要忘记添加相应的权限，网络、文件读取等
 
 
 
