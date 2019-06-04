@@ -123,7 +123,7 @@ public class PhotoPagerActivity extends BasePhotoActivity {
             photoPagerBean.setPagePosition(savedInstanceState.getInt(STATE_POSITION));
         }
         pager.setCurrentItem(photoPagerBean.getPagePosition());
-        tv_img_size.setText(1+"/"+photoPagerBean.getBigImgUrls().size());
+        tv_img_size.setText(photoPagerBean.getPagePosition()+"/"+photoPagerBean.getBigImgUrls().size());
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -133,8 +133,7 @@ public class PhotoPagerActivity extends BasePhotoActivity {
             @Override
             public void onPageSelected(int position) {
                 currentPosition = position;
-                currentIndex=position+1;
-                tv_img_size.setText(currentIndex+"/"+photoPagerBean.getBigImgUrls().size());
+                tv_img_size.setText(currentPosition+"/"+photoPagerBean.getBigImgUrls().size());
 
             }
 
