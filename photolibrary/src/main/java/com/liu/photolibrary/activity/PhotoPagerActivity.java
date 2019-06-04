@@ -85,7 +85,9 @@ public class PhotoPagerActivity extends BasePhotoActivity {
     private LinearLayout llt_top;
     private ImageView iv_pic_dow;
     private TextView tv_back;
+    private TextView tv_img_size;
     private boolean flog_llt = false;//显示隐藏
+    private int currentIndex;
     //-end
 
     @Override
@@ -103,6 +105,7 @@ public class PhotoPagerActivity extends BasePhotoActivity {
         llt_top = findViewById(R.id.llt_top);
         iv_pic_dow = findViewById(R.id.iv_pic_dow);
         tv_back = findViewById(R.id.tv_back);
+        tv_img_size=findViewById(R.id.tv_img_size);
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,6 +123,7 @@ public class PhotoPagerActivity extends BasePhotoActivity {
             photoPagerBean.setPagePosition(savedInstanceState.getInt(STATE_POSITION));
         }
         pager.setCurrentItem(photoPagerBean.getPagePosition());
+        tv_img_size.setText(1+"/"+photoPagerBean.getBigImgUrls().size());
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -129,6 +133,9 @@ public class PhotoPagerActivity extends BasePhotoActivity {
             @Override
             public void onPageSelected(int position) {
                 currentPosition = position;
+                currentIndex=position+1;
+                tv_img_size.setText(currentIndex+"/"+photoPagerBean.getBigImgUrls().size());
+
             }
 
             @Override
