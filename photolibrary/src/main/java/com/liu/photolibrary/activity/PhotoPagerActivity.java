@@ -140,27 +140,29 @@ public class PhotoPagerActivity extends BasePhotoActivity {
         onViewTapListener = new OnViewTapListener() {
             @Override
             public void onViewTap(View view, float x, float y) {
-                flog_llt = !flog_llt;
-                if (flog_llt) {
+                finish();
 
-                    llt_top.setVisibility(View.GONE);
-                    // 隐藏动画
-                    TranslateAnimation mHiddenAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF,
-                            0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
-                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
-                            -1.0f);
-                    mHiddenAction.setDuration(700);
-                    llt_top.startAnimation(mHiddenAction);//开始动画
-                } else {
-                    TranslateAnimation mShowAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f,
-                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
-                            -1.0f, Animation.RELATIVE_TO_SELF, -0.0f);
-                    mShowAction.setRepeatMode(Animation.REVERSE);
-                    mShowAction.setDuration(700);
-                    llt_top.startAnimation(mShowAction);//开始动画
-                    llt_top.setVisibility(View.VISIBLE);
-                }
-
+//                flog_llt = !flog_llt;
+//                if (flog_llt) {
+//
+//                    llt_top.setVisibility(View.GONE);
+//                    // 隐藏动画
+//                    TranslateAnimation mHiddenAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF,
+//                            0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+//                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+//                            -1.0f);
+//                    mHiddenAction.setDuration(700);
+//                    llt_top.startAnimation(mHiddenAction);//开始动画
+//                } else {
+//                    TranslateAnimation mShowAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f,
+//                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+//                            -1.0f, Animation.RELATIVE_TO_SELF, -0.0f);
+//                    mShowAction.setRepeatMode(Animation.REVERSE);
+//                    mShowAction.setDuration(700);
+//                    llt_top.startAnimation(mShowAction);//开始动画
+//                    llt_top.setVisibility(View.VISIBLE);
+//                }
+//
             }
         };
 
